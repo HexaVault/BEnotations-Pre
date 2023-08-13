@@ -1,7 +1,7 @@
 {
-  "name": "@antimatter-dimensions/notations",
-  "version": "3.2.0",
-  "description": "Notations used in Antimatter Dimensions",
+  "name": "BEnotations-Pre",
+  "version": "1.0.0",
+  "description": "Notations used in Antimatter Dimensions, built for break_eternity.js. This set of notations is specifically built for numbers less than 1e9e15",
   "scripts": {
     "build": "npm run build:ad && npm run build:community",
     "build:ad": "bili --config bili.config.base.ts",
@@ -27,12 +27,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/antimatter-dimensions/notations.git"
+    "url": "https://github.com/HexaVault/BEnotations-Pre.git"
   },
   "bugs": {
-    "url": "https://github.com/antimatter-dimensions/notations/issues"
+    "url": "https://github.com/HexaVault/BEnotations-Pre/issues"
   },
-  "homepage": "https://github.com/antimatter-dimensions/notations",
+  "homepage": "https://github.com/HexaVault/BEnotations-Pre",
   "devDependencies": {
     "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
