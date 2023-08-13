@@ -1,11 +1,6 @@
 # Antimatter Dimensions Notations
 
-[![NPM](https://img.shields.io/npm/v/@antimatter-dimensions/notations.svg)](https://www.npmjs.com/package/@antimatter-dimensions/notations)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0d92aa2fdf1d4921a0f74c8c0cf989f7)](https://www.codacy.com/gh/antimatter-dimensions/notations?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=antimatter-dimensions/notations&amp;utm_campaign=Badge_Grade)
-
-All the notations that are included in the current version of Antimatter Dimensions, and the upcoming Reality Update.
-
-See them in action [here](https://antimatter-dimensions.github.io/notations/).
+All the notations that are included in the current version of Antimatter Dimensions, and the upcoming Reality Update, however they have been ported to break_eternity.js
 
 ## Setup
 
@@ -23,19 +18,6 @@ You can also grab specific versions here:
 - https://github.com/Patashu/break_eternity.js/releases
 - https://github.com/antimatter-dimensions/notations/releases
 
-#### npm
-
-```
-npm install @antimatter-dimensions/notations
-```
-
-There is no default export. The correct way to import notations is:
-
-```js
-import * as ADNotations from "@antimatter-dimensions/notations";
-```
-
-## Use
 
 All the notations are included inside `ADNotations` object:
 
@@ -113,10 +95,7 @@ looking at the source code of existing notations.
 
 To use community notations, download community pack from the
 [releases](https://github.com/antimatter-dimensions/notations/releases) page.
-The community pack can be used **separately** from the base pack. To access
-community notations from your code, use `ADCommunityNotations` instead of
-`ADNotations`. Apart from that, the usage pattern is the same as with
-the base pack
+The community pack can be used **separately** from the base pack. 
 
 If you want your notation to be publicly available via this library, you should
 start by adding your notation to a `src/community` folder and making a pull
@@ -126,36 +105,6 @@ After your PR is merged (which means that one of the maintainers decided that
 it is good enough), you can reach out to AD devs about adding it to a base game.
 There is no guarantee that it will be added, but all well-made notations will
 be available as a community pack.
-
-## Build
-
-First, clone the repo
-
-```
-git clone https://github.com/antimatter-dimensions/notations.git
-cd notations
-```
-
-Then install npm dependencies
-
-```
-npm install
-```
-
-And then run build command which will build all packs to the dist directory and
-to the `docs` directory.
-
-```
-npm run build
-```
-
-To build the AD pack or community pack separately, use `build:ad` or `build:community`
-command.
-
-## Contributing
-
-1. Be reasonable when commiting something.
-2. Be original when making a new notation.
 
 ## Acknowledgements
 
@@ -206,5 +155,3 @@ Thanks to the authors of community notations:
 - Infix standard: [Ivan Sanchez](https://github.com/IvanSanchez)
 - Infix long scale: [Ivan Sanchez](https://github.com/IvanSanchez)
 - English: [ducdat0507 ](https://github.com/ducdat0507)
-
-Additional thanks to [Omsi](https://github.com/omsi6) for the scaffolding of docs page.
