@@ -10,13 +10,13 @@ The simplest way to use this package is to include these scripts in your HTML pa
 
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/break_eternity.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@antimatter-dimensions/notations"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/adnot-beport-small"></script>
 ```
 
 You can also grab specific versions here:
 
 - https://github.com/Patashu/break_eternity.js/releases
-- https://github.com/antimatter-dimensions/notations/releases
+- https://github.com/HexaVault/BEnotations-Pre
 
 
 All the notations are included inside `ADNotations` object:
@@ -155,3 +155,5 @@ Thanks to the authors of community notations:
 - Infix standard: [Ivan Sanchez](https://github.com/IvanSanchez)
 - Infix long scale: [Ivan Sanchez](https://github.com/IvanSanchez)
 - English: [ducdat0507 ](https://github.com/ducdat0507)
+
+And a thanks to the base notations code. You can find it [here](https://www.npmjs.com/package/@antimatter-dimensions/notations), however it is intended for use with break_infinity.
