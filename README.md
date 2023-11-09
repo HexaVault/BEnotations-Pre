@@ -1,4 +1,4 @@
-# Antimatter Dimensions Notations
+# Antimatter Dimensions Notations - break_eternity.js Port
 
 All the notations that are included in the current version of Antimatter Dimensions, and the upcoming Reality Update, however they have been ported to break_eternity.js
 
