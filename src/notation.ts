@@ -83,6 +83,7 @@ export abstract class Notation {
       // need this to use specialformat first
       return formatWithCommas(specialFormat(exponent, 0));
     }
-    return this.formatDecimal(new Decimal(exponent), largeExponentPrecision, largeExponentPrecision);
+    //I really, really hope this works
+    return this.format(exponent, largeExponentPrecision, largeExponentPrecision);
   }
 }
