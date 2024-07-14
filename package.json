@@ -1,6 +1,6 @@
 {
   "name": "adnot-beport-small",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Notations used in Antimatter Dimensions, built for break_eternity.js. This set of notations is specifically built for numbers less than 1e9e15",
   "scripts": {
     "build": "npm run build:ad && npm run build:community",
@@ -34,7 +34,6 @@
   },
   "homepage": "https://github.com/HexaVault/BEnotations-Pre",
   "devDependencies": {
-
     "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",

@@ -57,7 +57,7 @@ export class AllNotation extends Notation {
 
   public formatDecimal(value: Decimal, places: number): string {
     // eslint-disable-next-line newline-per-chained-call
-    const index = Math.floor(Math.log2((value.abs().plus(2).exponent + Math.log10(Math.max(1,value.abs().plus(2).mantissa)))/ Math.log10(2)));
+    const index = Math.floor(Math.log2(value.abs().plus(2).log10().toNumber() / Math.log10(2)));
     const notation = notationList[index % notationList.length];
     return notation.format(value, places, places);
   }
