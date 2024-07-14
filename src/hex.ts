@@ -52,7 +52,7 @@ export class HexNotation extends Notation {
     // This function implements a tweak to the usual logarithm.
     // It has the same value at powers of 2 but is linear between
     // powers of 2 (so for example, f(3) = 1.5).
-    const floorOfLog = Math.floor((x.exponent + Math.log(Math.max(x.mantissa, 1))) / Math.log10(2));
+    const floorOfLog = Math.floor((x.log10().toNumber()) / Math.log10(2));
     const previousPowerOfTwo = Decimal.pow(2, floorOfLog);
     const fractionToNextPowerOfTwo = Decimal.div(x, previousPowerOfTwo).toNumber() - 1;
     return floorOfLog + fractionToNextPowerOfTwo;

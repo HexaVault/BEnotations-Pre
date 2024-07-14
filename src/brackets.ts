@@ -8,7 +8,7 @@ export class BracketsNotation extends Notation {
 
   public formatDecimal(value: Decimal): string {
     const table = [")", "[", "{", "]", "(", "}"];
-    const log6 = Math.LN10 / Math.log(6) * (value.exponent + Math.log(Math.max(value.mantissa, 1)));
+    const log6 = Math.LN10 / Math.log(6) * (value.log10().toNumber());
     let wholePartOfLog = Math.floor(log6);
     const decimalPartOfLog = log6 - wholePartOfLog;
     // Easier to convert a number between 0-35 to base 6 than messing with fractions and shit
