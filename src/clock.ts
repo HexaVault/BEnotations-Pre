@@ -40,7 +40,7 @@ export class ClockNotation extends Notation {
     // 4 clocks, in general, is hyper scientific. However, when the fourth clock shows
     // up (showing 0), we do another cycle of scientific (so, mantissa + 2 exponent digits)
     // This gives another 144 possible values for the exponent, which gets to 300.
-    const log = (value.log10().toNumber()) / LOG12;
+    const log = (value.max(1).log10().toNumber()) / LOG12;
     let exponent = Math.floor(log);
     if (log < 301) {
       const clockLow = (12 ** (log - exponent + 1) - 12) / 11;

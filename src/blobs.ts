@@ -67,6 +67,6 @@ export class BlobsNotation extends Notation {
       return num.toNumber();
     }
     // 1001 and above: previous number ^ 1.0002
-    return (Math.log10(num.log10().toNumber()) - LOG3) / Math.log10(1.0002) + 1000;
+    return (Math.log10(num.max(1).log10().toNumber()) - LOG3) / Math.log10(1.0002) + 1000;
   }
 }

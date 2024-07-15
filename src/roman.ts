@@ -49,7 +49,7 @@ export class RomanNotation extends Notation {
     if (value.lt(MAXIMUM)) {
       return this.romanize(value.toNumber());
     }
-    const log10 = value.log10().toNumber();
+    const log10 = value.max(1).log10().toNumber();
     const maximums = log10 / MAX_LOG_10;
     const current = MAXIMUM ** (maximums - Math.floor(maximums));
     return `${this.romanize(current)}↑${this.formatDecimal(new Decimal(maximums))}`;

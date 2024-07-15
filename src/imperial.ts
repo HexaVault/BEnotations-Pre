@@ -53,8 +53,8 @@ export class ImperialNotation extends Notation {
     if (value.lt(MAX_VOLUME)) {
       return this.convertToVolume(value.toNumber(), VOLUME_ADJECTIVES[0]);
     }
-    let logValue = new Decimal(10).pow(value.log10().min(LOG_MAX_VOLUME)).exponent +
-      Number(Math.log(Math.max(new Decimal(10).pow(value.log10().min(LOG_MAX_VOLUME)).mantissa, 1)));
+    let logValue = new Decimal(10).pow(value.max(1).log10().min(LOG_MAX_VOLUME)).exponent +
+      Number(Math.log(Math.max(new Decimal(10).pow(value.max(1).log10().min(LOG_MAX_VOLUME)).mantissa, 1)));
     let adjectiveIndex = 1;
     while (logValue > REDUCE_RATIO) {
       adjectiveIndex++;
