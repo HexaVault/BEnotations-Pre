@@ -7,7 +7,8 @@
     "build:ad": "bili --config bili.config.base.ts",
     "build:community": "bili --config bili.config.community.ts",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "buildAndPublish": "npm run build && npm publish"
   },
   "main": "dist/ad-notations.umd.js",
   "module": "dist/ad-notations.esm.js",
