@@ -13,7 +13,7 @@ export class MixedLogarithmSciNotation extends Notation {
     if (value.lt(1e33)) {
       return scientific.formatDecimal(value, places, placesExponent);
     }
-    const log10 = value.max(1).log10().toNumber();
+    const log10 = value.exponent;
     return `e${this.formatExponent(log10, places, (n, p) => n.toFixed(p), placesExponent)}`;
   }
 }

@@ -11,11 +11,17 @@ export class MixedScientificNotation extends Notation {
   }
 
   public formatDecimal(value: Decimal, places: number, placesExponent: number): string {
-    if (value.max(1).log10().lt(33)) {
+    if (value.exponent < 33) {
       return standard.formatDecimal(value, places, placesExponent);
     }
-    return formatMantissaWithExponent(formatMantissaBaseTen, this.formatExponent.bind(this),
-      10, 1, (x, _) => formatMantissaBaseTen(x, 0)
+    // eslint-disable-next-line function-call-argument-newline
+    return formatMantissaWithExponent(
+      formatMantissaBaseTen,
+      this.formatExponent.bind(this),
+      10,
+      1,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      (x, _) => formatMantissaBaseTen(x, 0)
     )(value, places, placesExponent);
   }
 }

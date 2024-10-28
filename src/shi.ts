@@ -26,7 +26,7 @@ export class ShiNotation extends Notation {
   }
 
   private shi(value: Decimal): string {
-    const scaled = (value.plus(1).max(1).log10().floor().toNumber() * 1000) ** 0.08;
+    const scaled = (value.exponent * 1000) ** 0.08;
     let shi = "";
     for (let i = 0; i < 3; i++) {
       shi += this.getShiCharacter(scaled * SHI.length ** i);

@@ -7,7 +7,7 @@ export class LogarithmNotation extends Notation {
   }
 
   public formatDecimal(value: Decimal, places: number, placesExponent: number): string {
-    const log10 = value.max(1).log10().toNumber();
+    const log10 = value.exponent;
     return `e${this.formatExponent(log10, places, (n, p) => n.toFixed(p), placesExponent)}`;
   }
 }

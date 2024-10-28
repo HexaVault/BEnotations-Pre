@@ -24,7 +24,7 @@ export class DotsNotation extends Notation {
     if (value.lt(16387063.9980315)) {
       return this.dotify(value.toNumber() * 254);
     }
-    const log = (value.max(1).log10().toNumber()) / Math.log10(254);
+    const log = (value.exponent) / Math.log10(254);
     const exponent = Math.floor(log - 2);
     const mantissa = 254 ** (log - exponent);
     return `${this.dotify(exponent)}⣿${this.dotify(mantissa * 254)}`;

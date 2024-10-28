@@ -68,16 +68,16 @@ describe("Abstract Notation", () => {
     describe("with places", () => {
       it("should format a positive value to the specified places", () => {
         const num = 1.2345e3;
-        expect(notation.format(num, 0)).toBe("1e+3");
-        expect(notation.format(num, 1)).toBe("1.2e+3");
-        expect(notation.format(num, 2)).toBe("1.23e+3");
+        expect(notation.format(num, 0)).toBe("1235");
+        expect(notation.format(num, 1)).toBe("1234.5");
+        expect(notation.format(num, 2)).toBe("1234.50");
       });
 
       it("should format a negative value to the specified places", () => {
         const num = -1.2345e3;
-        expect(notation.format(num, 0)).toBe("-1e+3");
-        expect(notation.format(num, 1)).toBe("-1.2e+3");
-        expect(notation.format(num, 2)).toBe("-1.23e+3");
+        expect(notation.format(num, 0)).toBe("-1235");
+        expect(notation.format(num, 1)).toBe("-1234.5");
+        expect(notation.format(num, 2)).toBe("-1234.50");
       });
     });
 
@@ -101,23 +101,23 @@ describe("Abstract Notation", () => {
       it("should have no effect on a value above 1000", () => {
         const num = 1234.567;
 
-        expect(notation.format(num, 0, 0)).toBe("1e+3");
-        expect(notation.format(num, 0, 1)).toBe("1e+3");
-        expect(notation.format(num, 0, 2)).toBe("1e+3");
-        expect(notation.format(num, 1, 0)).toBe("1.2e+3");
-        expect(notation.format(num, 1, 1)).toBe("1.2e+3");
-        expect(notation.format(num, 1, 2)).toBe("1.2e+3");
+        expect(notation.format(num, 0, 0)).toBe("1235");
+        expect(notation.format(num, 0, 1)).toBe("1235");
+        expect(notation.format(num, 0, 2)).toBe("1235");
+        expect(notation.format(num, 1, 0)).toBe("1234.6");
+        expect(notation.format(num, 1, 1)).toBe("1234.6");
+        expect(notation.format(num, 1, 2)).toBe("1234.6");
       });
 
       it("should have no effect on a value below -1000", () => {
         const num = -1234.567;
 
-        expect(notation.format(num, 0, 0)).toBe("-1e+3");
-        expect(notation.format(num, 0, 1)).toBe("-1e+3");
-        expect(notation.format(num, 0, 2)).toBe("-1e+3");
-        expect(notation.format(num, 1, 0)).toBe("-1.2e+3");
-        expect(notation.format(num, 1, 1)).toBe("-1.2e+3");
-        expect(notation.format(num, 1, 2)).toBe("-1.2e+3");
+        expect(notation.format(num, 0, 0)).toBe("-1235");
+        expect(notation.format(num, 0, 1)).toBe("-1235");
+        expect(notation.format(num, 0, 2)).toBe("-1235");
+        expect(notation.format(num, 1, 0)).toBe("-1234.6");
+        expect(notation.format(num, 1, 1)).toBe("-1234.6");
+        expect(notation.format(num, 1, 2)).toBe("-1234.6");
       });
     });
   });

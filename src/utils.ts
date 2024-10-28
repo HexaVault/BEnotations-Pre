@@ -1,5 +1,5 @@
 import Decimal from "break_eternity.js";
-import { Settings } from "./settings.js";
+import { Settings } from "./settings";
 
 function commaSection(value: string, index: number): string {
   if (index === 0) {
@@ -219,7 +219,8 @@ separator: string = "e", forcePositiveExponent: boolean = false):
       // No need to do a second check for roll-over.
       m = mantissaFormattingIfExponentIsFormatted(mantissa, precision);
     }
-    return `${m}${separator}${e}`;
+    // eslint-disable-next-line no-negated-condition
+    return `${!isExponentFullyShown(exponent) ? `${separator}${e}` : `${m}${separator}${e}`}`;
   };
 }
 
